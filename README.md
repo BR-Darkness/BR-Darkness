@@ -4,11 +4,11 @@
 
 <br>
 
-<p align="center"><img height="200px" style="border-radius: 48px;" src="https://github.com/BR-Darkness/BR-Darkness/blob/main/Confused-Cat.gif"></p>
+<p align="center"><img height="150px" src="https://github.com/BR-Darkness/BR-Darkness/blob/main/Confused-Cat.gif"></p>
 
 <br>
 
-> ...
+> Olá, seja muito bem-vindo ao meu perfil, o meu nome é Vitor e eu gosto de fazer alguns projetos em C#, HTML e CSS e futuramente espero me tornar um desenvolvedor profissionalmente, aprendendo a cada dia e tentando ser melhor do que ontem...
 
 <br>
 
