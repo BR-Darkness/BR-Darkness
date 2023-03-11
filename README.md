@@ -19,7 +19,7 @@
 <br>
 
 <details>
-  <summary>
+  <summary align="center">
     <h2 align="center">Algumas Informações: </h2>
   </summary>
 <br>
