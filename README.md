@@ -18,14 +18,18 @@
 
 <br>
 
-<h2 align="center">Algumas Informações: </h2>
-
+<details>
+  <summary>
+    <h2 align="center">Algumas Informações: </h2>
+  </summary>
 <br>
 
 <img height="180em" width="100%" src="https://github-readme-stats.vercel.app/api?username=BR-Darkness&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=false&locale=pt-br&border_radius=16px">
 
 <p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BR-Darkness&hide_progress=true&theme=tokyonight&border_radius=16px&locale=pt-br"></p>
 
+</details>
+  
 <h2 align="center">Contato: </h2>
 
 <br>
