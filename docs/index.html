@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded&display=swap" crossorigin/>
     
     <header id="Menu">
-        <nav><a href="https://github.com/BR-Darkness" aria-label="Meu GitHub" target="_blank" id="Logo" class="material-symbols-rounded">code</a><p style="color: #fff;">Hello World</p></nav>
+        <nav><a href="https://github.com/BR-Darkness" aria-label="Meu GitHub" target="_blank" id="Logo" class="material-symbols-rounded">code</a><p style="color: #fff;">BR.Darkness _</p></nav>
         <nav id="MenuItens">
             <ul>
                 <li><a href="#Perfil">Perfil</a></li>
@@ -26,64 +26,57 @@
         </nav>
     </header>
     
-    <section>
-
-        <nav id="Apresentacao">
-            <img id="Avatar" src="img/Confused-Cat.gif" alt="Imagem de apresentação" width="156px" height="156px">
-            <div>
-                <h1>VITOR GALINDO DE OLIVEIRA</h1>
-                <h2><sub>Desenvolvedor .NET | Web Designer</sub></h2>
-            </div>
-        </nav>
-
-        <hr>
-
-        <div id="Perfil">
-            <h3><span class="material-symbols-rounded">person</span> PERFIL</h3>
-
-            <div class="Card">
-                <p style="text-align: justify;">Graduado em ciências da computação e com formação técnica em informática, busco atuar como desenvolvedor estando disponível para aprender novas áreas e tecnologias caso assim necessário, estou atualmente estudando desenvolvimento web, C# e .NET, sempre à procura de agregar aos projetos do qual faço parte.</p>
-
-                <nav style="justify-content: end;">
-                    <a href="https://www.linkedin.com/in/vitor-galindo/"><button>Mais informações e contato</button></a>
-                </nav>
-            </div>
-        </div>
-
-        <hr>
-
-        <div id="Habilidades">
-            <h3><span class="material-symbols-rounded">computer</span> HABILIDADES</h3>
-            <ul class="Card SkillsList">
-                <li>.NET</li>
-                <li>ASP.NET</li>
-                <li>C#</li>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Git & GitHub</li>
-                <li>Java</li>
-                <li>Inglês</li>
+    <div id="Apresentacao">
+        <img id="Avatar" src="img/Confused-Cat.gif" alt="Imagem de apresentação" width="156px" height="156px">
+        <div>
+            <h1>VITOR GALINDO DE OLIVEIRA</h1>
+            <h2>Desenvolvedor .NET / Desenvolvedor Frontend</h2>
+            <ul style="display: flex; list-style: none; justify-content: space-evenly; margin-top: 2em;">
+                <li><a href="https://github.com/BR-Darkness"><img src="img/github.svg" alt="Imagem de GitHub" width="32px" height="32px"></a></li>
+                <li><a href="https://www.linkedin.com/in/vitor-galindo/"><img src="img/linkedin.svg" alt="Imagem de Linkedin" width="32px" height="32px"></a></li>
+                <!-- <li><a href="#"><img src="img/save.png" alt="Imagem de Curriculo" width="32px" height="32px"></a></li> -->
             </ul>
         </div>
+    </div>
 
-        <hr><script src="app.js"></script>
-        
-        <div id="Projetos">
-            <h3><span class="material-symbols-rounded">code</span> MEUS REPOSITÓRIOS</h3>
+    <section>
+        <div id="Perfil"  class="Card">
+            <h3><span class="material-symbols-rounded">person</span> PERFIL:</h3>
 
-            <nav id="Repositorios_List" class="GridList">
-                <script>Repositorios()</script>
+            <p style="text-align: justify;">Graduado em ciências da computação e com formação técnica em informática, busco atuar como desenvolvedor estando disponível para aprender novas áreas e tecnologias caso assim necessário, estou atualmente estudando desenvolvimento web, C# e .NET, sempre à procura de agregar aos projetos do qual faço parte.</p>
+
+            <nav style="justify-content: end;">
+                <a href="https://www.linkedin.com/in/vitor-galindo/"><button>Mais informações e contato</button></a>
             </nav>
         </div>
 
-        <hr>
-
+        <div id="Habilidades"  class="Card">
+            <h3><span class="material-symbols-rounded">computer</span> HABILIDADES:</h3>
+            <ul class="SkillsList">
+                <li>.NET / ASP.NET </li>
+                <li>C#</li>
+                <li>HTML & CSS</li>
+                <li>Java</li>
+                <li>Git & GitHub</li>
+                <li>JavaScript (ES6)</li>
+                <li>Jekyll</li>
+                <li>Inglês</li>
+            </ul>
+            <p style="text-align: right;"><small>Dentre Outras...</small></p>
+        </div>
     </section>
 
+    <h3 class="ProjetosHeader"><span class="material-symbols-rounded">code</span> MEUS REPOSITÓRIOS & PROJETOS:</h3>
+    <div id="Projetos">
+        <script src="app.js"></script>
+        <nav id="Repositorios_List" class="GridList">
+            <script>Repositorios()</script>
+        </nav>
+    </div>
 
     <footer style="letter-spacing: 1px;">
         <p><strong>Vitor Galindo de Oliveira</strong></p>
-        <p>GitHub:<a href="https://github.com/BR-Darkness" target="_blank">BR-Darkness</a></p>
+        <p>GitHub: <a href="https://github.com/BR-Darkness" target="_blank">BR-Darkness</a></p>
     </footer>
 </body>
 </html>

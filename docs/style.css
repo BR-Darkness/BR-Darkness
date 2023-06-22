@@ -11,15 +11,23 @@
 
 :root
 {
-    --logo-color: #fff;
-    --menu-color: #181818;
-    --main-color: #00a170;
+    /* Background Color: */
+    --menus-bg-color: #181818;
+    --background: #f9fcf7;
+    --card-bg-color: #fff;
+
+    /* Colors: */
+    --gradient-color: #7fcfb7;
+    --main-color: #5cc771;
     --sub-color: #006d4c;
+
+    /* Selection: */
+    --selection-color: #5cc77180;
 }
 
 ::selection
 {
-    background-color: #00a17080;
+    background-color: var(--selection-color);
 }
 
 *
@@ -27,54 +35,49 @@
     -webkit-tap-highlight-color: transparent;
     box-sizing: border-box;
     text-decoration: none;
-}
-
-body
-{
-    font-family: 'Roboto', sans-serif;
-    background-color: #fff;
-    transition: 0.25s;
-    color: #1d1d1d;
-    line-height: 1.5;
-    
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-
     padding: 0;
     margin: 0;
     border: 0;
 }
 
-/* Theme */
-#Theme::before
+html
 {
-    content: "Dark_Mode";
-    color: #fdfdfd;
+    scroll-behavior: smooth;
 }
 
-.Dark-Theme
+body
+{
+    background-color: var(--background);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;    
+    transition: 0.25s;
+    color: #1d1d1d;
+}
+
+/* ----- ----- Theme ----- ----- */
+
+.Dark-Theme 
 {
     background-color: #141418;
-    --main-color: #00c78a;
-    --sub-color: #00a170;
-    color: #fdfdfd;
+    --gradient-color: #f0ca75;
+    --main-color: #f0ca75;
+    --sub-color: #8a7443;
+    --selection-color: #f0ca7580;
 }
 
-.Dark-Theme p
+.Dark-Theme .ProjetosHeader
 {
-    color: #eee;
+    color: #f1f1f1;
 }
 
 .Dark-Theme #Theme::before
 {
     content: "Light_Mode";
-    color: #ff7;
 }
 
 /* ----- ----- Elements ----- ----- */
 
-br, hr, img, span, .material-symbols-rounded, #Menu
+br, img, span, button, .material-symbols-rounded, #Menu
 {
     /* Para o usuario não selecionar*/
     -webkit-user-select:none;
@@ -84,10 +87,9 @@ br, hr, img, span, .material-symbols-rounded, #Menu
 
 a
 {
-    color: var(--main-color);
+    color: var(--sub-color);
     font-weight: bold;
     transition: .1s;
-    padding: .5rem;
 }
 
 a:hover
@@ -109,7 +111,8 @@ sub
 
 span
 {
-    color: var(--main-color);
+    background-color: #fff;
+    color: var(--sub-color);
     vertical-align: sub;
     margin: 0 .5rem 0 0;
     border-radius: 50%;
@@ -117,40 +120,28 @@ span
     padding: .5rem;
 }
 
-hr
+h1
 {
-    background-color: var(--main-color);
-    border: 4px solid var(--main-color);
-    border-radius: 8px;
-    margin: 48px auto;
-    max-width: 50%;
+    font-size: 1.1em;
+    color: #1d1d1d;
 }
 
-h1, h2
+h2
 {
-    margin: 0;
-}
-
-h1, h3
-{
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-h3
-{
-    margin-top: 2em;
+    color: var(--sub-color);
+    font-size: 0.95em;
+    text-wrap: balance;
 }
 
 h4
 {
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1.15em;
 }
 
 p
 {
-    color: #555;
+    color: #444;
 }
 
 nav
@@ -164,57 +155,55 @@ nav
 
 button
 {
+    box-shadow: 0px 0px 2px var(--main-color);
     background-color: var(--sub-color);
-    border: 2px solid var(--main-color);
-    border-radius: 48px;
-    padding: .5rem 1em;
+    border-radius: 4px;
+    padding: .75em 1em;
     font-weight: bold;
     font-size: small;
-    color: #fff;
     cursor: pointer;
     transition: .1s;
+    color: #fff;
 }
 
 button:hover
 {
-    background-color: var(--main-color);
+    filter: brightness(1.1);
+}
+
+.GithubButton
+{
+    background-color: #565656;
 }
 
 /* ----- ----- Menu & Footer ----- -----*/
 
-#Menu, footer
-{
-    letter-spacing: 1px;
-}
-
 #Logo
 {
-    color: var(--logo-color);
+    color: var(--main-color);
     font-size: 36px;
     margin: .25em 0;
 }
 
 #Logo:hover
 {
-    color: var(--main-color);
+    color: var(--sub-color);
 }
 
 #Menu
 {
     border-bottom: 2px solid var(--main-color);
-    background: var(--menu-color);
-    border-radius: 0 0 8px 8px;
-    margin-bottom: 2em;
-    min-height: 80px;
-    padding: .5rem;
-    width: 100%;
-    
+    background: var(--menus-bg-color);
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    min-height: 80px;
     font-size: 14px;
     flex-wrap: wrap;
     display: flex;
+    padding: 1em;
+    width: 100%;
+    gap: 1em;
 }
 
 #MenuItens ul
@@ -229,7 +218,7 @@ button:hover
 
 #MenuItens li
 {
-    margin: .75em 1em;
+    padding: 1em;
 }
 
 #MenuItens a
@@ -243,107 +232,139 @@ button:hover
     color: #fff;
 }
 
-/* Avatar Image */
+#Theme::before
+{
+    content: "Dark_Mode";
+    color: #fdfdfd;
+    cursor: pointer;
+}
+
+#Menu, footer
+{
+    letter-spacing: 1px;
+}
+
+/* ----- ----- Avatar Image ----- ----- */
 
 #Apresentacao
 {
-    justify-content: space-evenly; 
+    background: linear-gradient(to top, var(--background), var(--gradient-color));
+    border-bottom: 2px solid var(--main-color);
+    border-radius: 0 0 48px 48px;
+    justify-content: center; 
+    flex-direction: column;
     align-items: center; 
     text-align: center;
+    margin-bottom: 4em;
     flex-wrap: wrap; 
     display: flex; 
+    height: 65vh;
+    padding: 1em;
+    width: 100%;
 }
 
 #Avatar
 {
     border: 2px solid var(--main-color); 
     border-radius: 50%; 
+    margin: 1em 2em;
     display: block;
-    margin: auto;
-    margin: 2em;
 }
 
-/* Section */
+/* ----- ----- Section ----- ----- */
 
 section
 {
-    max-width: 800px;
-    margin: 1em;
+    grid-template-columns: repeat(auto-fill, min(600px, 100%));
+    justify-content: center;
+    align-items: center;
+    max-width: 1250px;
+    margin: 1em auto;
+    display: grid;
+    gap: 1em;
+}
+
+.ProjetosHeader
+{
+    text-align: center; 
+    margin: 4em 0 2em 0;
+}
+
+#Projetos
+{
+    max-width: 1250px;
+    margin: 1em auto;
+}
+
+#Habilidades ul
+{
+    padding: 0;
 }
 
 .GridList
 {
-    grid-template-columns: repeat(auto-fill, 100%);
+    grid-template-columns: repeat(auto-fill, min(400px, 100%));
     justify-content: center;
+    align-items: center;
     display: grid;
-    gap: 1em ;
+    gap: 1em;
 }
 
 .SkillsList
 {
-    grid-template-columns: repeat(auto-fill, 150px);
     justify-content: center;
     flex-wrap: wrap;
-    display: grid;
     display: flex;
-    gap: 2em;
+    gap: 1em ;
 }
 
 .SkillsList li
 {
-    background-color: var(--sub-color);
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
     border-radius: 48px;
     text-align: center;
-    font-size: smaller;
-    /* font-weight: bold; */
-    color: #fdfdfd;
+    padding: .75em 1em;
     list-style: none;
     min-width: 100px;
+    font-size: 12px;
     cursor: default;
-    padding: .5rem;
-}
-
-.SkillsList li:hover
-{
-    background-color: var(--main-color);
-    transition: .1s;
 }
 
 .Card
 {
     box-shadow: 0px 0px 2px var(--main-color);
-    border: 2px solid var(--sub-color);
+    background-color: var(--card-bg-color);
+    justify-content: space-evenly;
+    flex-direction: column;
     text-align: justify;
-    border-radius: 48px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
     padding: 2em;
+    height: 100%;
+    margin: 1em;
 }
 
-.CardImage
+.Card nav
 {
-    background-color: #00a17080;
-    object-fit: scale-down;
-    border-radius: 4px;
-    display: block;
-    height: 250px;
-    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 1em;
+    gap: 1em 2em;
 }
 
-/* footer */
+/* ----- ----- footer ----- ----- */
 
 footer
 {
     border-top: 2px solid var(--main-color);
-    background-color: var(--menu-color);
-    border-radius: 8px 8px 0 0;
-    min-height: 80px;
-    margin-top: 2em;
-    width: 100%;
-
+    background-color: var(--menus-bg-color);
     justify-content: space-evenly;
     align-items: center;
+    min-height: 90px;
+    margin-top: 4em;
     flex-wrap: wrap;
     display: flex;
+    width: 100%;
 }
 
 footer b, footer p
@@ -355,7 +376,12 @@ footer b, footer p
     margin: 1em;
 }
 
-/* Scroll */
+footer a
+{
+    color: var(--main-color);
+}
+
+/* ----- ----- Scroll ----- ----- */
 ::-webkit-scrollbar 
 {
     height: 0.75em;
@@ -370,21 +396,11 @@ footer b, footer p
 ::-webkit-scrollbar-thumb 
 {
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 2px;
     background: #777; 
 }
 
 ::-webkit-scrollbar-thumb:hover 
 {
     background: var(--sub-color); 
-}
-
-/* Mobile */
-
-@media screen and (max-width: 650px) 
-{
-    nav nav
-    {
-        justify-content: space-evenly;
-    }
 }

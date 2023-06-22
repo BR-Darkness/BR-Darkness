@@ -55,7 +55,7 @@ function Repositorios()
                             </nav>
                             <nav>
                                 <a href="${Repositorio.homepage}" target="_blank"><button>Ver Site</button></a>
-                                <a href="${Repositorio.html_url}" target="_blank"><button>GitHub</button></a>
+                                <a href="${Repositorio.html_url}" target="_blank"><button class="GithubButton">GitHub</button></a>
                             </nav>
                         </nav>
                     </div>
@@ -77,7 +77,7 @@ function Repositorios()
                                 <p><b>Data:</b> <i>${String('####-##-##').replace(/#/g,function(m,o) {return Repositorio.created_at[o];}).split('-').reverse().join('/')}</i></p>
                             </nav>
                             <nav>
-                                <a href="${Repositorio.html_url}" target="_blank"><button>GitHub</button></a>
+                                <a href="${Repositorio.html_url}" target="_blank"><button class="GithubButton">GitHub</button></a>
                             </nav>
                         </nav>
                     </div>
