@@ -1,4 +1,6 @@
-/* roboto-regular - latin */
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic');
+
+/* ----- ----- roboto-regular - latin ----- ----- */
 @font-face 
 {
     font-display: swap;
@@ -13,8 +15,8 @@
 {
     /* Background Color: */
     --menus-bg-color: #181818;
-    --background: #f9fcf7;
-    --card-bg-color: #fff;
+    --background: #f9fdfaaa;
+    --card-bg-color: #fffe;
 
     /* Colors: */
     --gradient-color: #7fcfb7;
@@ -42,6 +44,7 @@
 
 html
 {
+    scroll-padding-top: 120px;
     scroll-behavior: smooth;
 }
 
@@ -49,30 +52,66 @@ body
 {
     background-color: var(--background);
     font-family: 'Roboto', sans-serif;
-    line-height: 1.5;    
-    transition: 0.25s;
+    position: relative;
     color: #1d1d1d;
+    line-height: 2;
+}
+
+#Noise
+{
+    pointer-events: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    background-image:url('img/noise.png');
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+    opacity: 0.1;
+    z-index: 1;
 }
 
 /* ----- ----- Theme ----- ----- */
 
-.Dark-Theme 
+.dark-theme 
 {
-    background-color: #141418;
+    /* Background Color: */
+    --menus-bg-color: #282828;
+    --background: #141418;
+    --card-bg-color: #282828;
+
+    /* Colors: */
     --gradient-color: #f0ca75;
     --main-color: #f0ca75;
     --sub-color: #8a7443;
-    --selection-color: #f0ca7580;
+
+    /* Selection: */
+    --selection-color: #ffffff40;
+
+    /* Text Color: */
+    color: #d1d1d1;
 }
 
-.Dark-Theme .ProjetosHeader
-{
-    color: #f1f1f1;
-}
-
-.Dark-Theme #Theme::before
+.dark-theme #Theme::before
 {
     content: "Light_Mode";
+}
+
+.dark-theme #Apresentacao
+{
+    background: linear-gradient(to top, #282828, var(--gradient-color));
+}
+
+.dark-theme .white-icon
+{
+    filter: invert(1);
+}
+
+.dark-theme #Apresentacao h1, .dark-theme h3, .dark-theme main span, .dark-theme .card h4
+{
+    color: var(--main-color);
 }
 
 /* ----- ----- Elements ----- ----- */
@@ -97,21 +136,8 @@ a:hover
     color: #0ac;
 }
 
-b
+main span
 {
-    color: var(--sub-color);
-}
-
-sub
-{
-    color: var(--sub-color); 
-    font-size: .75em; 
-    margin: 0;
-}
-
-span
-{
-    background-color: #fff;
     color: var(--sub-color);
     vertical-align: sub;
     margin: 0 .5rem 0 0;
@@ -120,28 +146,15 @@ span
     padding: .5rem;
 }
 
-h1
+h3
 {
-    font-size: 1.1em;
-    color: #1d1d1d;
-}
-
-h2
-{
-    color: var(--sub-color);
-    font-size: 0.95em;
-    text-wrap: balance;
+    letter-spacing: .5px;
 }
 
 h4
 {
-    text-align: left;
     font-size: 1.15em;
-}
-
-p
-{
-    color: #444;
+    letter-spacing: -.5px;  
 }
 
 nav
@@ -171,18 +184,38 @@ button:hover
     filter: brightness(1.1);
 }
 
-.GithubButton
+.card-github-button
 {
     background-color: #565656;
 }
 
-/* ----- ----- Menu & Footer ----- -----*/
+/* ----- ----- Menu ----- ----- */
 
 #Logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75em;
+}
+
+#Logo span
 {
     color: var(--main-color);
     font-size: 36px;
     margin: .25em 0;
+}
+
+#Logo:hover span
+{
+    color: var(--sub-color);
+}
+
+#Logo p
+{
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
 }
 
 #Logo:hover
@@ -194,16 +227,27 @@ button:hover
 {
     border-bottom: 2px solid var(--main-color);
     background: var(--menus-bg-color);
-    justify-content: space-evenly;
+    justify-content: space-around;
+    letter-spacing: 1px;
     align-items: center;
     text-align: center;
+    padding: 1em 0em;
     min-height: 80px;
     font-size: 14px;
     flex-wrap: wrap;
+    gap: 0em 1em;
     display: flex;
-    padding: 1em;
     width: 100%;
-    gap: 1em;
+}
+
+#MenuItens
+{
+    overflow-x: auto;
+}
+
+#MenuItens::-webkit-scrollbar 
+{
+    height: 2px;
 }
 
 #MenuItens ul
@@ -211,20 +255,18 @@ button:hover
     justify-content: center;
     align-items: center;
     list-style: none;
-    flex-wrap: wrap;
     display: flex;
-    padding: 0;
 }
 
 #MenuItens li
 {
-    padding: 1em;
+    padding: .5em 1em;
 }
 
 #MenuItens a
 {
     color: var(--main-color);
-    padding: .75rem;
+    padding: .25rem;
 }
 
 #MenuItens a:hover
@@ -239,28 +281,61 @@ button:hover
     cursor: pointer;
 }
 
-#Menu, footer
-{
-    letter-spacing: 1px;
-}
-
-/* ----- ----- Avatar Image ----- ----- */
+/* ----- ----- Hero Section ----- ----- */
 
 #Apresentacao
 {
-    background: linear-gradient(to top, var(--background), var(--gradient-color));
+    background: linear-gradient(to top, #fff, var(--gradient-color));
     border-bottom: 2px solid var(--main-color);
-    border-radius: 0 0 48px 48px;
+    border-radius: 0 0 16px 16px;
     justify-content: center; 
     flex-direction: column;
     align-items: center; 
     text-align: center;
     margin-bottom: 4em;
+    max-height: 450px;
     flex-wrap: wrap; 
     display: flex; 
     height: 65vh;
     padding: 1em;
     width: 100%;
+}
+
+#Apresentacao h1
+{
+    font-size: clamp(1.1rem, 2.5vw, 1.5em);
+    text-shadow: 2px 2px #28282828;
+    color: var(--sub-color);
+    letter-spacing: -.5px;
+    font-weight: bold;
+}
+
+#Apresentacao h2
+{
+    letter-spacing: .5px;
+    text-wrap: balance;
+    line-height: 1.65;
+    font-size: 0.9em;
+}
+
+#Apresentacao ul
+{
+    display: flex; 
+    justify-content: space-evenly; 
+    margin-top: 1.25em;
+    list-style: none; 
+}
+
+#Avatar-Moldura
+{
+    border: 2px dashed var(--main-color); 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; 
+    margin: 1em 2em;
+    display: flex;
+    height: 170px;
+    width: 170px;
 }
 
 #Avatar
@@ -273,7 +348,7 @@ button:hover
 
 /* ----- ----- Section ----- ----- */
 
-section
+.double-section
 {
     grid-template-columns: repeat(auto-fill, min(600px, 100%));
     justify-content: center;
@@ -284,10 +359,16 @@ section
     gap: 1em;
 }
 
-.ProjetosHeader
+.projetos-header
 {
     text-align: center; 
     margin: 4em 0 2em 0;
+}
+
+#Perfil a
+{
+    display: inline-flex;
+    justify-content: end;
 }
 
 #Projetos
@@ -301,40 +382,48 @@ section
     padding: 0;
 }
 
-.GridList
+#Habilidades small
+{
+    border-bottom: 2px dashed var(--main-color);
+    padding: .75em 1.5em;
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.grid-list
 {
     grid-template-columns: repeat(auto-fill, min(400px, 100%));
     justify-content: center;
     align-items: center;
     display: grid;
-    gap: 1em;
+    gap: 1.75em 0em;
 }
 
-.SkillsList
+.skills-list
 {
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
-    gap: 1em ;
+    gap: 1em;
 }
 
-.SkillsList li
+.skills-list li
 {
-    border: 1px solid var(--main-color);
-    border-radius: 48px;
+    border: 1px dashed var(--sub-color);    
+    padding: .5em .75em;
+    border-radius: 8px;
     text-align: center;
-    padding: .75em 1em;
     list-style: none;
     min-width: 100px;
     font-size: 12px;
-    cursor: default;
 }
 
-.Card
+.card
 {
     box-shadow: 0px 0px 2px var(--main-color);
     background-color: var(--card-bg-color);
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
     text-align: justify;
     border-radius: 8px;
@@ -343,22 +432,27 @@ section
     padding: 2em;
     height: 100%;
     margin: 1em;
+    gap: .5em;
 }
 
-.Card nav
+.card nav
 {
     justify-content: space-evenly;
-    margin-top: 1em;
-    gap: 1em 2em;
+    gap: .75em 2em;
 }
 
-/* ----- ----- footer ----- ----- */
+.card b, .card h4
+{
+    color: var(--sub-color);
+}
 
+/* ----- ----- Footer ----- -----*/
 footer
 {
     border-top: 2px solid var(--main-color);
     background-color: var(--menus-bg-color);
-    justify-content: space-evenly;
+    justify-content: space-around;
+    letter-spacing: .5px;
     align-items: center;
     min-height: 90px;
     margin-top: 4em;
@@ -381,7 +475,28 @@ footer a
     color: var(--main-color);
 }
 
+/* ----- ----- Button Top ----- ----- */
+
+.btn-top
+{
+    border: 2px solid var(--main-color);
+    background-color: #282828;
+    border-radius: 8px;
+    padding: .25em;
+
+    position: fixed;
+    margin: .5em;
+    bottom: 0;
+    right: 0;
+}
+
+.btn-top:hover
+{
+    color: #f1f1f1;
+}
+
 /* ----- ----- Scroll ----- ----- */
+
 ::-webkit-scrollbar 
 {
     height: 0.75em;

@@ -1,0 +1,56 @@
+@media print 
+{
+    body
+    {
+        /* Background Color: */
+        --menus-bg-color: transparent !important;
+        --card-bg-color: #fff !important;
+        --background: #fff !important;
+
+        /* Colors: */
+        --gradient-color: transparent !important;
+        --main-color: #141414 !important;
+        --sub-color: #141414 !important;
+
+        /* Others: */
+        border-radius: 8px;
+        border: 2px solid;
+    }
+
+    *
+    {
+        background: transparent !important;
+        box-shadow: none !important;
+        font-weight: 400 !important;
+        color: #141414 !important;
+    }
+
+    #Menu, #Projetos, #Noise, .projetos-header, button, #Apresentacao ul, .btn-top
+    {
+        display: none !important;
+    }
+
+    span
+    {
+        border: none !important;
+        margin: 0 !important;
+    }
+
+    #Apresentacao
+    {
+        flex-direction: row-reverse !important;
+        height: fit-content !important;
+        flex-wrap: nowrap !important;
+        border-radius: 0 !important;
+    }
+
+    #Habilidades, #Perfil
+    {
+        margin: 0 !important;
+    }
+
+    .skills-list li, .card
+    {
+        border: 2px solid !important;
+    }
+}
