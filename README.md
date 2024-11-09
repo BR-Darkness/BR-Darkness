@@ -1,6 +1,6 @@
-<h1 align="center">Hello world 💻...</h1>
+<h1 align="center">...💻 Seja muito bem-vindo(a) 💻...</h1>
 
-<h6 align="center">• #.Net , #HTML5 , #CSS3 , #JavaScript , #Java •</h6>
+<h6 align="center">• #TypeScript, #React.js, #Figma, #.Net, #HTML5, #CSS3, #JavaScript, #Java, #Electron •</h6>
 
 <br>
 
@@ -10,13 +10,19 @@
 
 <br>
 
-<blockquote align="justify">Graduado em ciências da computação e com formação técnica em informática, busco atuar como desenvolvedor estando disponível para aprender novas áreas e tecnologias caso assim necessário, estou atualmente estudando desenvolvimento web, C# e .NET, sempre à procura de agregar aos projetos do qual faço parte.</blockquote>
+<blockquote align="justify">Olá, me chamo Vitor Galindo <br><br>
+
+Sou Graduado em ciências da computação pela Universidade Nove de Julho (Uninove) e possuo formação técnica em informática pela ETEC e estou em busca de atuar como desenvolvedor seja na área do desenvolvimento front-end (React/Next, Angular ou React Native) ou na area de backend (C#, Java, Node, Python etc).
+
+Estou sempre estudando e me atualizando para aprimorar as minhas habilidades para assim poder contribuir de forma significativa para as mais variadas funções e projetos que eu venha a participar. Sou flexível, proativo e comprometido em aprender.</blockquote>
 
 <br>
 
-- 💻 Desenvolvedor Full Stack em desenvolvimento...
-- 💭 As vezes sofre com bloqueio criativo...
-- ⏰ Desenvolve no tempo livre...
+- 💻 │ Desenvolvedor Full Stack em desenvolvimento...
+
+- ⏰ │ Sempre procurando o que desenvolver...
+
+- 💭 │ As vezes sofre com bloqueio criativo...
 
 <br>
 
@@ -27,12 +33,11 @@
   
   <br>
 
-  <img height="180em" width="100%" src="https://github-readme-stats.vercel.app/api?username=BR-Darkness&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=false&locale=pt-br&border_radius=16px">
+  <img height="180em" width="100%" src="https://github-readme-stats.vercel.app/api?username=BR-Darkness&rank_icon=github&show_icons=true&theme=dark&include_all_commits=true&count_private=false&locale=pt-br&border_radius=16px">
 
-  <br>
+  <br><br>
 
-
-  <p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BR-Darkness&hide_progress=true&theme=tokyonight&border_radius=16px&locale=pt-br"></p>
+  <p align="center"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BR-Darkness&theme=dark&border_radius=16px&locale=pt-br"></p>
 </details>
   
 <h2 align="center">Contato: </h2>
